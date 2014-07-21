@@ -1,0 +1,23 @@
+ History File for VH1-MPI simulation run on 07 / 19 / 2014
+ machine id: gordon-ln3.sdsc.edu      
+ Running 3 dimensions on   16 processors, split   4 X   4
+ Running in single precision mode
+ 
+ Oblique Sod shock tube 
+ Grid dimensions:  100 x  100 x  100
+ 
+ Adiabatic index, gamma =    1.666667    
+ Pressure ratio is   0.1000000    
+ Density ratio is   0.1250000    
+ 
+Wrote files for  SDSC1000.nc to disk at time = 0.00000E+00 (ncycle =       0)
+ Starting on cycle number            0
+Wrote files for  SDSC1001.nc to disk at time = 5.00000E-02 (ncycle =      16)
+Wrote files for  SDSC1002.nc to disk at time = 1.00000E-01 (ncycle =      32)
+Wrote files for  SDSC1003.nc to disk at time = 1.50000E-01 (ncycle =      48)
+Wrote files for  SDSC1004.nc to disk at time = 2.00000E-01 (ncycle =      64)
+Wrote files for  SDSC1005.nc to disk at time = 2.50000E-01 (ncycle =      80)
+Wrote files for  SDSC1006.nc to disk at time = 3.00000E-01 (ncycle =      94)
+ successful stop at cycle number         100
+ elapsed time =   0.137570186456045       minutes
+speed = 757.2 kz/s/pe

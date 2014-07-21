@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -q normal
+#PBS -l nodes=1:ppn=16:native
+#PBS -l walltime=0:10:00
+#PBS -N try1
+#PBS -o my.out
+#PBS -e my.err
+#PBS -A ddp182
+#PBS -V
+# Start of user commands - comments start with a hash sign (#)
+module load netcdf
+cd /oasis/scratch/train109/temp_project/VH1
+mpiexec -np 64 ./vh1-mpi
