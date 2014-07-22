@@ -1,0 +1,100 @@
+####### Job parameters #######
+jobname			=	"mytestjob"
+GR			=	1		# 1 for GR, 0 for Newtonian
+outdir			=	"Data"		# output directory, must exist
+initial_data		=	"Collapse"	# "Sedov", "Shocktube", "OSC", "Collapse"
+profile_name		=	"profiles/s15s7b2.short"		# stellar profiles
+profile_type		=	1		# 1: .short format
+gravity_active		=	1		# do we want gravity?
+ntmax			=	20000000	# maximum timestep
+tend			=	2.0d0		# maximum time
+
+
+####### Grid parameters #######
+geometry		=	2		# 1: planar, 2: spherical
+gridtype		=	"custom"	# "log", "unigrid", "custom", "custom2"
+### custom & custom2 input parameters ###
+grid_custom_rad1	=	20.0d5		# radial extent of custom grid (log outside)
+grid_custom_dx1		=	2.0d4		# smallest radial zone
+grid_custom_number	=	10		# in custom2, number of larger interior zones
+grid_custom_inner	=	9.6d4		# in custom2, size of first zone
+
+rmax_from_profile	=	1		# take rmax to be where rho=3.0d3g/cm^3
+rho_cut 		=	3.0d2		# density to cut profile at if rmax_from_profile = 1
+grid_rmax		=	-		# maximum radius, if rmax_from_profile = 0
+radial_zones		=	1000		# number of radial zones
+ghosts1			=	4		# number of ghost cells
+
+
+####### Hydro Parameters #######
+do_hydro		=	1		# 1 for hydro on
+cffac			=	0.5d0		# CFL factor
+iorder_hydro		=	2		# temporal integration order
+reconstruction_method	=	"ppm"		# "tvd", "pc","ppm"
+ppm_origin_TVD		=	5		
+tvd_limiter		=	"MC"		# MC, minmod,
+flux_type		= 	"HLLE"		# HLLE, Tadmor
+
+
+####### EOS parameters #######
+eoskey			=	1		# hybrid: 1
+						# poly: 2
+						# hot nuclear: 3
+						# ideal: 4
+eos_table_name 		= 	-
+hybridgamma_th		=	1.5d0		# hybrid gamma_th
+hybridgamma1		=	1.325d0		# hybrid gamma_th
+hybridgamma2		=	2.5d0		# hybrid gamma_th
+
+
+####### Output parameters #######
+ntinfo			=	100		# stdout
+dynamic_output_control  = 	1		# use output_control.F90
+vs_mass			=	0		# output .xg files vs mass_bary
+small_output		=	0		# used to limit .xg files
+dtout			=	1.0d-3		# time between outputs
+dtout_scalar		=	1.0d-4		# time between scalar out
+ntout			=	-1		# output every timesteps
+ntout_scalar		=	-1		# scalar output
+
+
+####### Restart parameters #######
+ntout_restart		=	-1		# restart output frequency in timesteps
+dtout_restart		=	1.0d-2		# restart output frequency in time
+do_restart		= 	0
+restart_file_name	=	""
+
+
+####### Neutrino parameters #######
+fake_neutrinos		=	0		# 1 for ANY neutrino scheme
+ye_of_rho		=	0		# 1 for prebounce ye_of_rho
+neutrino_pressure	=	0		# 1 for inclusion of p_nu & e_nu
+### Leakage ###
+do_leak_ros		=	0		# rosswog leakage
+do_heating		=	0		# 1 for heating
+heat_fac		=	0		# ad-hoc heating factor
+### Ye of rho ###
+ye_profile_name		=	""
+do_yeofrhofit		=	0		# 1 use fit parameters (liebendorfer 2005)
+yeofrho_rho1		=	0		# lower density cut
+yeofrho_rho2		=	0		# upper density cut
+yeofrho_ye1		=	0		# upper ye cut
+yeofrho_ye2		=	0		# lower ye cut
+yeofrho_yec		=	0		# correction parameter
+
+
+####### Atmosphere parameters #######
+atmo_rho_rel_min	=	0.0d0
+atmo_rho_abs_min	=	3.0d2
+atmo_fac		=	0.1d0
+
+
+####### Rotation #######
+do_rotation		=	0		# 1 for 1D rotation
+set_omega		=	-		# 1 for analytic omega
+omega_c			=	-		# Central values (rad/s)
+omega_A			=	-		# radial dependence factor (cm)
+
+
+####### Test problems #######
+shocktube_problem	=	-		# 1,2,3,4 for various shocktube setups

@@ -1,0 +1,4 @@
+F90=gfortran
+F90FLAGS=-O2
+MODINC="-I ./"
+LDFLAGS= -O2 
