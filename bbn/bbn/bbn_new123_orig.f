@@ -4814,8 +4814,8 @@ C              ----  ---- -- -- -- -- --------- -------
 C----------DEFAULT COMPUTATION PARAMETERS.
       DATA cy0    /.300/           !Default time step limiting constant.
       DATA ct0    /.030/           !Default time step limiting constant.
-      DATA t9i0   /1.00e+02/       !Default initial temperature.
-      DATA t9f0   /1.00e-02/       !Default final temperature.
+      DATA t9i0   /1.00e+03/       !Default initial temperature.
+      DATA t9f0   /1.00e-11/       !Default final temperature.
       DATA ytmin0 /1.00e-25/       !Default smallest abundances allowed.
       DATA inc0   /1/             !Default accumulation increment.
 C-----------DEFAULT MODEL PARAMETERS.

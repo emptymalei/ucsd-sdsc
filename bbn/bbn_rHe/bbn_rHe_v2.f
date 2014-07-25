@@ -1931,7 +1931,7 @@ C===========================PROCEDURE DIVISION==================================
         Tnue0=4.0
         Tnueb0=5.33
         Tnue=4.0 !need to change in case of oscillations
-        Tnueb=8.0 !need to change in case of oscillations
+        Tnueb=10.0 !need to change in case of oscillations
         rhob0 = 50.272 !projjwal
         rhob  = 50.272 !projjwal
         r9cell = 11.0
