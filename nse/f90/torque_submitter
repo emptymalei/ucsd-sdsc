@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS -q normal
+#PBS -l nodes=1:ppn=1:native
+#PBS -l walltime=0:00:20
+#PBS -N calcalcal
+#PBS -o stdout.out
+#PBS -e stderr.err
+#PBS -A ddp182
+#PBS -m abe
+#PBS -V
+
+# cd /oasis/scratch/$USER/temp_project
+cd $PBS_O_WORKDIR
+date
+module purge
+module load gnu openmpi_ib
+mpirun -np 1 -machinefile $PBS_NODEFILE ./burst
+date
